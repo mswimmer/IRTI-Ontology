@@ -1,0 +1,1988 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://purl.com/irti#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://purl.com/irti#"
+     versionIRI="http://purl.com/irti/2017/06/14">
+    <Prefix name="" IRI="http://purl.com/irti#"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
+    <Prefix name="irti" IRI="http://purl.com/irti#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">2017-06-14</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Incident Response and Threat Intelligence ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Copyright 2017 Morton Swimmer
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An ontology for classifying and analyzing Internet entities with an emphasis on computer incident response and threat intelligence processing.</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="SOA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="CryptographicHashAlgorithm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="FQDN"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasLOC"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasSOARname"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="RRSIG"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasDNSKEYProtocol"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasNSEC3PARAMFlagFields"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SSHBannerText"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasDSAlgorithm"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasRRSIGSignature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="DomainProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="CryptoAlgorithm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="TLPAmber"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="property"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasSOAExpire"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasBadPTR"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="IPv6Address"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="DNSKey"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasDNSKEYFlags"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasA"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasSRVPort"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasRRSIGLabels"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SRV"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasMX"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Rating"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ILLEGAL_SRV_RECORD"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasSOAMinTTL"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasRRSIGSignerName"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasSPF"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasRRSIGKeyTag"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasDNSKEYPublicKey"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="InternetResource"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SSHBanner"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SHA_256"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="HINFO"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasRRSIGInceptionExpiration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ECDSA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="A"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Benign"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasDomain"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasNSEC3PARAMHashAlgorithms"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="NS"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasSSHFPType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="PTR"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="RFC3330_Violation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasDSPublicKey"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasSRVPriority"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="dnsResolutionData"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasSSHFP"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasSRVWeight"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Cipher"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="BannerRetrieval"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="RSA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="NameServer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="DNSError"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Address"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="LOC"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SSHFP"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasDSFlags"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasNSEC3PARAMSalt"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasViolation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasSSHBannerText"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasMxPriority"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasDNSKEYAlgorithm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="DSA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="TLD"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="dnsRecordObject"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasTXT"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasRRSIGSignatureExpiration"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasSOAMname"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasSOASerial"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasSSHServerKey"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasSSHFPAlgorithm"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasNSECAllowedRecord"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="FastFlux"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="InternetDomain"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="TXT"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasDS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="MailDomain"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasDNSKEY"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasMxFQDN"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="CNAME"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasNumericAddress"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasRating"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasSOA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SPF"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="IPv4Address"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="DNSRecord"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ILLEGAL_MX_RECORD"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasNSEC"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasSSHFPValue"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasRP"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Resolution"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasResolution"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SHA_1"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasRRSIGOriginalTTL"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="NSEC"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasNSEC3PARAM"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="TLPGreen"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="MX"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasCNAME"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasSSHBanner"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="DS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="TLPWhite"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasRRSIG"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="NSEC3Param"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasNSEC3PARAMIterations"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ILLEGAL_SOA_RECORD"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasSRVTarget"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="MACAddress"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Malicious"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasSRV"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasDSProtocol"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasNSECDomainFrom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SharingPolicy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="NSEC3"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="TLPRed"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="DoubleFlux"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="InternetEvent"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasRRSIGTypeCovered"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasHINFO"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasNSECDomainTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasNS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="RP"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Incident"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasAAAA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SingleFlux"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="HashAlgorithm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="AAAA"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasPTR"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasSOARetry"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasRRSIGAlgorithmNumber"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Suspicious"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasSOARefresh"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="A"/>
+        <Class IRI="DNSRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="AAAA"/>
+        <Class IRI="DNSRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Address"/>
+        <Class IRI="InternetResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="BannerRetrieval"/>
+        <Class IRI="InternetEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Benign"/>
+        <Class IRI="Rating"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="CNAME"/>
+        <Class IRI="DNSRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Cipher"/>
+        <Class IRI="CryptoAlgorithm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="CryptographicHashAlgorithm"/>
+        <Class IRI="HashAlgorithm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DNSKey"/>
+        <Class IRI="DNSRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DNSRecord"/>
+        <Class IRI="InternetResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DS"/>
+        <Class IRI="DNSRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DSA"/>
+        <Class IRI="Cipher"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DoubleFlux"/>
+        <Class IRI="FastFlux"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ECDSA"/>
+        <Class IRI="Cipher"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="FQDN"/>
+        <Class IRI="InternetDomain"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="FastFlux"/>
+        <Class IRI="DomainProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="HINFO"/>
+        <Class IRI="DNSRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="HashAlgorithm"/>
+        <Class IRI="CryptoAlgorithm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ILLEGAL_MX_RECORD"/>
+        <Class IRI="DNSError"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ILLEGAL_SOA_RECORD"/>
+        <Class IRI="DNSError"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ILLEGAL_SRV_RECORD"/>
+        <Class IRI="DNSError"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="IPv4Address"/>
+        <Class IRI="Address"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="IPv6Address"/>
+        <Class IRI="Address"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="InternetDomain"/>
+        <Class IRI="InternetResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="LOC"/>
+        <Class IRI="DNSRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="MACAddress"/>
+        <Class IRI="Address"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="MX"/>
+        <Class IRI="DNSRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="MailDomain"/>
+        <Class IRI="FQDN"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Malicious"/>
+        <Class IRI="Rating"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="NS"/>
+        <Class IRI="DNSRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="NSEC"/>
+        <Class IRI="DNSRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="NSEC3"/>
+        <Class IRI="DNSRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="NSEC3Param"/>
+        <Class IRI="DNSRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="NameServer"/>
+        <Class IRI="FQDN"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PTR"/>
+        <Class IRI="DNSRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="RFC3330_Violation"/>
+        <Class IRI="DNSError"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="RP"/>
+        <Class IRI="DNSRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="RRSIG"/>
+        <Class IRI="DNSRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="RSA"/>
+        <Class IRI="Cipher"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Resolution"/>
+        <Class IRI="InternetEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SHA_1"/>
+        <Class IRI="CryptographicHashAlgorithm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SHA_256"/>
+        <Class IRI="CryptographicHashAlgorithm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SOA"/>
+        <Class IRI="DNSRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SPF"/>
+        <Class IRI="DNSRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SRV"/>
+        <Class IRI="DNSRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SSHBanner"/>
+        <Class IRI="BannerRetrieval"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SSHBannerText"/>
+        <Class IRI="BannerRetrieval"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SSHFP"/>
+        <Class IRI="DNSRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SingleFlux"/>
+        <Class IRI="FastFlux"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Suspicious"/>
+        <Class IRI="Rating"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TLD"/>
+        <Class IRI="InternetDomain"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TLPAmber"/>
+        <Class IRI="SharingPolicy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TLPGreen"/>
+        <Class IRI="SharingPolicy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TLPRed"/>
+        <Class IRI="SharingPolicy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TLPWhite"/>
+        <Class IRI="SharingPolicy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TXT"/>
+        <Class IRI="DNSRecord"/>
+    </SubClassOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="dnsRecordObject"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasA"/>
+        <ObjectProperty IRI="dnsRecordObject"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasAAAA"/>
+        <ObjectProperty IRI="dnsRecordObject"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasBadPTR"/>
+        <ObjectProperty IRI="dnsRecordObject"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasCNAME"/>
+        <ObjectProperty IRI="dnsRecordObject"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasDNSKEY"/>
+        <ObjectProperty IRI="dnsRecordObject"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasDS"/>
+        <ObjectProperty IRI="dnsRecordObject"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasLOC"/>
+        <ObjectProperty IRI="dnsRecordObject"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasMX"/>
+        <ObjectProperty IRI="dnsRecordObject"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasMxFQDN"/>
+        <ObjectProperty IRI="dnsRecordObject"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasNS"/>
+        <ObjectProperty IRI="dnsRecordObject"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasNSEC"/>
+        <ObjectProperty IRI="dnsRecordObject"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasNSEC3PARAM"/>
+        <ObjectProperty IRI="dnsRecordObject"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasNSECAllowedRecord"/>
+        <ObjectProperty IRI="hasNSEC"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasNSECDomainFrom"/>
+        <ObjectProperty IRI="hasNSEC"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasNSECDomainTo"/>
+        <ObjectProperty IRI="hasNSEC"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasPTR"/>
+        <ObjectProperty IRI="dnsRecordObject"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasRRSIG"/>
+        <ObjectProperty IRI="dnsRecordObject"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasSOA"/>
+        <ObjectProperty IRI="dnsRecordObject"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasSOAMname"/>
+        <ObjectProperty IRI="hasSOA"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasSOARname"/>
+        <ObjectProperty IRI="hasSOA"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasSPF"/>
+        <ObjectProperty IRI="dnsRecordObject"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasSRV"/>
+        <ObjectProperty IRI="dnsRecordObject"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasSRVTarget"/>
+        <ObjectProperty IRI="hasSRV"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasSSHFP"/>
+        <ObjectProperty IRI="dnsRecordObject"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasSSHFPAlgorithm"/>
+        <ObjectProperty IRI="dnsRecordObject"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasSSHFPType"/>
+        <ObjectProperty IRI="dnsRecordObject"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasA"/>
+        <Class IRI="Resolution"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasAAAA"/>
+        <Class IRI="Resolution"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasBadPTR"/>
+        <Class IRI="Resolution"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasCNAME"/>
+        <Class IRI="Resolution"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasDNSKEY"/>
+        <Class IRI="Resolution"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasDS"/>
+        <Class IRI="Resolution"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasLOC"/>
+        <Class IRI="Resolution"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasMxFQDN"/>
+        <Class IRI="Resolution"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasNS"/>
+        <Class IRI="Resolution"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasNSEC"/>
+        <Class IRI="Resolution"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasNSEC3PARAM"/>
+        <Class IRI="Resolution"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasNSECAllowedRecord"/>
+        <Class IRI="Resolution"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasNSECDomainFrom"/>
+        <Class IRI="Resolution"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasNSECDomainTo"/>
+        <Class IRI="Resolution"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasPTR"/>
+        <Class IRI="Resolution"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasResolution"/>
+        <Class IRI="FQDN"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasSOA"/>
+        <Class IRI="Resolution"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasSOAMname"/>
+        <Class IRI="Resolution"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasSOARname"/>
+        <Class IRI="Resolution"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasSPF"/>
+        <Class IRI="Resolution"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasSRV"/>
+        <Class IRI="Resolution"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasSRVTarget"/>
+        <Class IRI="Resolution"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasSSHBanner"/>
+        <Class IRI="Address"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasSSHBannerText"/>
+        <Class IRI="SSHBanner"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasSSHFP"/>
+        <Class IRI="Resolution"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasSSHFPAlgorithm"/>
+        <Class IRI="Resolution"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasSSHFPType"/>
+        <Class IRI="Resolution"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasViolation"/>
+        <Class IRI="Resolution"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="property"/>
+        <Class IRI="InternetDomain"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasA"/>
+        <Class IRI="IPv4Address"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasAAAA"/>
+        <Class IRI="IPv6Address"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasBadPTR"/>
+        <Class IRI="InternetDomain"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasCNAME"/>
+        <Class IRI="InternetDomain"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasDNSKEY"/>
+        <Class IRI="DNSKey"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasDS"/>
+        <Class IRI="DS"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasDomain"/>
+        <Class IRI="InternetDomain"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasMxFQDN"/>
+        <Class IRI="InternetDomain"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasNS"/>
+        <Class IRI="FQDN"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasNSEC"/>
+        <Class IRI="NSEC"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasNSEC3PARAM"/>
+        <Class IRI="NSEC3Param"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasNSECAllowedRecord"/>
+        <Class IRI="DNSRecord"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasNSECDomainFrom"/>
+        <Class IRI="InternetDomain"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasNSECDomainTo"/>
+        <Class IRI="InternetDomain"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasPTR"/>
+        <Class IRI="FQDN"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasRRSIG"/>
+        <Class IRI="RRSIG"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasRating"/>
+        <Class IRI="Rating"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasResolution"/>
+        <Class IRI="Resolution"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasSOA"/>
+        <Class IRI="SOA"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasSOAMname"/>
+        <Class IRI="InternetDomain"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasSOARname"/>
+        <Class IRI="InternetDomain"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasSPF"/>
+        <Class IRI="SPF"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasSRV"/>
+        <Class IRI="SRV"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasSRVTarget"/>
+        <Class IRI="InternetDomain"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasSSHBanner"/>
+        <Class IRI="SSHBanner"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasSSHBannerText"/>
+        <Class IRI="SSHBannerText"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasSSHFP"/>
+        <Class IRI="SSHFP"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasSSHFPAlgorithm"/>
+        <Class IRI="CryptoAlgorithm"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasSSHFPType"/>
+        <Class IRI="HashAlgorithm"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasViolation"/>
+        <Class IRI="DNSError"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="property"/>
+        <Class IRI="DomainProperty"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hasDNSKEYAlgorithm"/>
+        <DataProperty IRI="dnsResolutionData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hasDNSKEYFlags"/>
+        <DataProperty IRI="dnsResolutionData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hasDNSKEYProtocol"/>
+        <DataProperty IRI="dnsResolutionData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hasDNSKEYPublicKey"/>
+        <DataProperty IRI="dnsResolutionData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hasDSAlgorithm"/>
+        <DataProperty IRI="dnsResolutionData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hasDSFlags"/>
+        <DataProperty IRI="dnsResolutionData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hasDSProtocol"/>
+        <DataProperty IRI="dnsResolutionData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hasDSPublicKey"/>
+        <DataProperty IRI="dnsResolutionData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hasHINFO"/>
+        <DataProperty IRI="dnsResolutionData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hasMxPriority"/>
+        <DataProperty IRI="dnsResolutionData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hasNSEC3PARAMFlagFields"/>
+        <DataProperty IRI="dnsResolutionData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hasNSEC3PARAMHashAlgorithms"/>
+        <DataProperty IRI="dnsResolutionData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hasNSEC3PARAMIterations"/>
+        <DataProperty IRI="dnsResolutionData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hasNSEC3PARAMSalt"/>
+        <DataProperty IRI="dnsResolutionData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hasRP"/>
+        <DataProperty IRI="dnsResolutionData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hasRRSIGAlgorithmNumber"/>
+        <DataProperty IRI="dnsResolutionData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hasRRSIGInceptionExpiration"/>
+        <DataProperty IRI="dnsResolutionData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hasRRSIGKeyTag"/>
+        <DataProperty IRI="dnsResolutionData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hasRRSIGLabels"/>
+        <DataProperty IRI="dnsResolutionData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hasRRSIGOriginalTTL"/>
+        <DataProperty IRI="dnsResolutionData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hasRRSIGSignature"/>
+        <DataProperty IRI="dnsResolutionData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hasRRSIGSignatureExpiration"/>
+        <DataProperty IRI="dnsResolutionData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hasRRSIGSignerName"/>
+        <DataProperty IRI="dnsResolutionData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hasRRSIGTypeCovered"/>
+        <DataProperty IRI="dnsResolutionData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hasSOAExpire"/>
+        <DataProperty IRI="dnsResolutionData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hasSOAMinTTL"/>
+        <DataProperty IRI="dnsResolutionData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hasSOARefresh"/>
+        <DataProperty IRI="dnsResolutionData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hasSOARetry"/>
+        <DataProperty IRI="dnsResolutionData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hasSOASerial"/>
+        <DataProperty IRI="dnsResolutionData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hasSRVPort"/>
+        <DataProperty IRI="dnsResolutionData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hasSRVPriority"/>
+        <DataProperty IRI="dnsResolutionData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hasSRVWeight"/>
+        <DataProperty IRI="dnsResolutionData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hasSSHFPValue"/>
+        <DataProperty IRI="dnsResolutionData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hasTXT"/>
+        <DataProperty IRI="dnsResolutionData"/>
+    </SubDataPropertyOf>
+    <FunctionalDataProperty>
+        <DataProperty IRI="hasNumericAddress"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="dnsResolutionData"/>
+        <Class IRI="Resolution"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasDNSKEYAlgorithm"/>
+        <Class IRI="Resolution"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasDNSKEYFlags"/>
+        <Class IRI="Resolution"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasDNSKEYProtocol"/>
+        <Class IRI="Resolution"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasDNSKEYPublicKey"/>
+        <Class IRI="Resolution"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasDSAlgorithm"/>
+        <Class IRI="Resolution"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasDSFlags"/>
+        <Class IRI="Resolution"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasDSProtocol"/>
+        <Class IRI="Resolution"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasDSPublicKey"/>
+        <Class IRI="Resolution"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasHINFO"/>
+        <Class IRI="Resolution"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasMxPriority"/>
+        <Class IRI="Resolution"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasNSEC3PARAMFlagFields"/>
+        <Class IRI="Resolution"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasNSEC3PARAMHashAlgorithms"/>
+        <Class IRI="Resolution"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasNSEC3PARAMIterations"/>
+        <Class IRI="Resolution"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasNSEC3PARAMSalt"/>
+        <Class IRI="Resolution"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasNumericAddress"/>
+        <Class IRI="Address"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasRP"/>
+        <Class IRI="Resolution"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasRRSIGAlgorithmNumber"/>
+        <Class IRI="Resolution"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasRRSIGInceptionExpiration"/>
+        <Class IRI="Resolution"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasRRSIGKeyTag"/>
+        <Class IRI="Resolution"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasRRSIGLabels"/>
+        <Class IRI="Resolution"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasRRSIGOriginalTTL"/>
+        <Class IRI="Resolution"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasRRSIGSignature"/>
+        <Class IRI="Resolution"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasRRSIGSignatureExpiration"/>
+        <Class IRI="Resolution"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasRRSIGSignerName"/>
+        <Class IRI="Resolution"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasRRSIGTypeCovered"/>
+        <Class IRI="Resolution"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasSOAExpire"/>
+        <Class IRI="Resolution"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasSOAMinTTL"/>
+        <Class IRI="Resolution"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasSOARefresh"/>
+        <Class IRI="Resolution"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasSOARetry"/>
+        <Class IRI="Resolution"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasSOASerial"/>
+        <Class IRI="Resolution"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasSRVPort"/>
+        <Class IRI="Resolution"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasSRVPriority"/>
+        <Class IRI="Resolution"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasSRVWeight"/>
+        <Class IRI="Resolution"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasSSHFPValue"/>
+        <Class IRI="Resolution"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasTXT"/>
+        <Class IRI="Resolution"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="hasDNSKEYAlgorithm"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasDNSKEYFlags"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasDNSKEYProtocol"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasDNSKEYPublicKey"/>
+        <Datatype abbreviatedIRI="xsd:base64Binary"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasDSAlgorithm"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasDSFlags"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasDSProtocol"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasDSPublicKey"/>
+        <Datatype abbreviatedIRI="xsd:base64Binary"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasHINFO"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasMxPriority"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasNSEC3PARAMFlagFields"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasNSEC3PARAMHashAlgorithms"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasNSEC3PARAMIterations"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasNSEC3PARAMSalt"/>
+        <Datatype abbreviatedIRI="xsd:hexBinary"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasNumericAddress"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasRP"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasRRSIGAlgorithmNumber"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasRRSIGInceptionExpiration"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasRRSIGKeyTag"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasRRSIGLabels"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasRRSIGOriginalTTL"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasRRSIGSignature"/>
+        <Datatype abbreviatedIRI="xsd:base64Binary"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasRRSIGSignatureExpiration"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasRRSIGSignerName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasRRSIGTypeCovered"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasSOAExpire"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasSOAMinTTL"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasSOARefresh"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasSOARetry"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasSOASerial"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasSRVPort"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasSRVPriority"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasSRVWeight"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasSSHFPValue"/>
+        <Datatype abbreviatedIRI="xsd:hexBinary"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasTXT"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>A</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Returns a 32-bit IPv4 address, most commonly used to map hostnames to an IP address of the host, but it is also used for DNSBLs, storing subnet masks in RFC 1101, etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>AAAA</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Returns a 128-bit IPv6 address, most commonly used to map hostnames to an IP address of the host.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Benign</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">benign</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>CNAME</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Canonical Name record (abbreviated as CNAME record) is a type of resource record in the Domain Name System (DNS) used to specify that a domain name is an alias for another domain, the &quot;canonical&quot; domain. All information, including subdomains, IP addresses, etc., are defined by the canonical domain.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>CNAME</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://tools.ietf.org/html/rfc1035#page-12</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>CryptographicHashAlgorithm</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A cryptographic hash function is a hash function which is considered practically impossible to invert, that is, to recreate the input data from its hash value alone.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>CryptographicHashAlgorithm</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Cryptographic_hash_function</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>DS</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The record used to identify the DNSSEC signing key of a delegated zone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>DS</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://tools.ietf.org/html/rfc4034</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>DSA</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Digital_Signature_Algorithm</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>DoubleFlux</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A more sophisticated type of fast flux, referred to itself as &quot;double-flux&quot;, is characterized by multiple nodes within the network registering and de-registering their addresses as part of the DNS Name Server record list for the DNS zone. This provides an additional layer of redundancy and survivability within the malware network.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>ECDSA</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>FQDN</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Fully qualified domain name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>FQDN</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FQDN</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>FastFlux</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Fast flux is a DNS technique used by botnets to hide phishing and malware delivery sites behind an ever-changing network of compromised hosts acting as proxies. It can also refer to the combination of peer-to-peer networking, distributed command and control, web-based load balancing and proxy redirection used to make malware networks more resistant to discovery and counter-measures.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>FastFlux</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FastFlux</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>FastFlux</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Fast_flux</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>HINFO</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Allows definition of the Hardware type and Operating System (OS) in use at a host. For security reasons these records are rarely used on public servers. If a space exists in the field it must be enclosed in quotes. Single space between Hardware and OS parameters.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>HINFO</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zytrax.com/books/dns/ch8/hinfo.html</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>HashAlgorithm</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A hash function is any function that can be used to map data of arbitrary size to data of fixed size.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>HashAlgorithm</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Hash_function</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Incident</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Threat incident is any activity or event that was measured that has been deemed a threat to computer systems or users.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Incident</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Threat incident</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>InternetDomain</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Arbitrary domain name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>InternetDomain</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Domain</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>InternetEvent</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Some property that existed at a point in time.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>LOC</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A LOC record (experimental) is a means for expressing geographic location information for a domain name.
+
+It contains WGS84 Latitude, Longitude and Altitude information together with host/subnet physical size and location accuracy.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>LOC</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://tools.ietf.org/html/rfc1876</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>MX</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Maps a domain name to a list of message transfer agents for that domain</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>MX</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://tools.ietf.org/html/rfc1035#page-12</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>MX</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://tools.ietf.org/html/rfc7505</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Malicious</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">malicious</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>NS</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Delegates a DNS zone to use the given authoritative name servers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>NS</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://tools.ietf.org/html/rfc1035#page-12</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>NSEC</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Part of DNSSEC—used to prove a name does not exist. Uses the same format as the (obsolete) NXT record.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>NSEC</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://tools.ietf.org/html/rfc4034</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>NSEC3</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An extension to DNSSEC that allows proof of nonexistence for a name without permitting zonewalking</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>NSEC3</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://tools.ietf.org/html/rfc5155</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>PTR</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Pointer to a canonical name. Unlike a CNAME, DNS processing stops and just the name is returned. The most common use is for implementing reverse DNS lookups, but other uses include such things as DNS-SD.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>PTR</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://tools.ietf.org/html/rfc1035#page-12</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>RP</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Information about the responsible person(s) for the domain. Usually an email address with the @ replaced by a .</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>RRSIG</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Signature for a DNSSEC-secured record set. Uses the same format as the SIG record.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>RRSIG</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://tools.ietf.org/html/rfc4034</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>RSA</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/RSA_(cryptosystem)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Rating</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">rating</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Resolution</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A DNS resolution is a mapping from a domain name to any of the DNS records that IANA defines in RFC 1035.
+https://www.ietf.org/rfc/rfc1035.txt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Resolution</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DNS Resolution</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Resolution</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://www.ietf.org/rfc/rfc1035.txt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>SHA_1</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/SHA-1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>SOA</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Start of [a zone of] authority record</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>SOA</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://tools.ietf.org/html/rfc1035#page-12</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>SOA</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://tools.ietf.org/html/rfc2308</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>SPF</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Sender Policy Framework (SPF) is a simple email-validation system designed to detect email spoofing by providing a mechanism to allow receiving mail exchangers to check that incoming mail from a domain comes from a host authorized by that domain&apos;s administrators. The list of authorized sending hosts for a domain is published in the Domain Name System (DNS) records for that domain in the form of a specially formatted TXT record. Email spam and phishing often use forged sender-addresses, so publishing and checking SPF records can be considered anti-spam techniques.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>SPF</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Sender_Policy_Framework</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>SRV</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Service record (SRV record) is a specification of data in the Domain Name System defining the location, i.e. the hostname and port number, of servers for specified services.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>SRV</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://tools.ietf.org/html/rfc2782</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>SSHFP</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Upon connection to an SSH server, the SSH client MAY look up the
+   SSHFP resource record(s) for the host it is connecting to.  If the
+   algorithm and fingerprint of the key received from the SSH server
+   match the algorithm and fingerprint of one of the SSHFP resource
+   record(s) returned from DNS, the client MAY accept the identity of
+   the server.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>SSHFP</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.openssh.com/txt/rfc4255.txt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>SingleFlux</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The simplest type of fast flux, named &quot;single-flux&quot;, is characterized by multiple individual nodes within the network registering and de-registering their addresses as part of the DNS A (address) record list for a single DNS name. This combines round robin DNS with very short—usually less than five minutes (300s)[2] -- TTL (time to live) values to create a constantly changing list of destination addresses for that single DNS name. The list can be hundreds or thousands of entries long.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Suspicious</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">suspicious</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>TLD</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Top-level domain</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>TLPAmber</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Limited distribution</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>TLPAmber</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Recipients may only share TLP:AMBER information with members of their own organization, and with clients or customers who need to know the information to protect themselves or prevent further harm. Sources are at liberty to specify additional intended limits of the sharing: these must be adhered to.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>TLPGreen</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Community wide</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>TLPGreen</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Recipients may share TLP:GREEN information with peers and partner organizations within their sector or community, but not via publicly accessible channels. Information in this category can be circulated widely within a particular community. TLP:GREEN information may not be released outside of the community.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>TLPRed</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Personal for named recipients only</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>TLPRed</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Recipients may not share TLP:RED information with any parties outside of the specific exchange, meeting, or conversation in which it was originally disclosed. In the context of a meeting, for example, TLP:RED information is limited to those present at the meeting. In most circumstances, TLP:RED should be exchanged verbally or in person.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>TLPWhite</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Unlimited</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>TLPWhite</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Subject to standard copyright rules, TLP:WHITE information may be distributed without restriction.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>TXT</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A TXT record (short for text record) is a type of resource record in the Domain Name System (DNS) used to provide the ability to associate some arbitrary and unformatted text with a host or other name, such as human readable information about a server, network, data center, and other accounting information. A domain is not limited to having only one text record, any fully qualified domain may potentially have several records.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>TXT</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/TXT_Record</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasBadPTR</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This points to a PTR record that is not compliant with the RFCs but seems to be used to make MX servers compliant with the PTR requirements. What is probably happening is that it&apos;s being treated like CNAME or DNAME. In the end, it&apos;s not clear how this can even work, but it was common enough to merit it&apos;s own record.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasCNAME</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has CNAME record</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasDS</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has DS record</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasDomain</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">specify that the subject refers to a domain</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasDomain</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has domain</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasLOC</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Latitude, Longitude and altitude of the location of the server or service referenced by this domain.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasLOC</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has LOC record</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasMxFQDN</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has MX FQDN</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasNS</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has nameserver</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasNSEC</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has NSEC record</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasNSECAllowedRecord</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has NSEC allowed record</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasNSECDomainFrom</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has NSEC domain range from</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasNSECDomainTo</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has NSEC domain range to</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasPTR</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has PTR record</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasRRSIGAlgorithmNumber</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has RRSIG algorithm number</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasRRSIGInceptionExpiration</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has RRSIG inception expiration</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasRRSIGKeyTag</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has RRSIG key tag</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasRRSIGLabels</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has RRSIG labels</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasRRSIGOriginalTTL</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has RRSIG original TTL</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasRRSIGSignature</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has RRSIG signature</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasRRSIGSignatureExpiration</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has RRSIG signature expiration</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasRRSIGSignerName</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has RRSIG signer name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasRating</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has rating</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasSOAMname</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has SOA MNAME</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasSOARname</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has SOA RNAME</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasSRV</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has SRV record</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasSRVTarget</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">the canonical hostname of the machine providing the service, ending in a dot.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasSRVTarget</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has SRV target</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasSSHFP</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has SSH fingerprint</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasSSHFPAlgorithm</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has SSH fingerprint algorithm</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasSSHFPType</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has SSH fingerprint type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasSSHFPValue</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has SSH fingerprint value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasViolation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has violation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>property</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A property of a domain</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+
