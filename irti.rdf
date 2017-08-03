@@ -1,0 +1,1568 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.com/irti#"
+     xml:base="http://purl.com/irti"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:irti="http://purl.com/irti#">
+    <owl:Ontology rdf:about="http://purl.com/irti#">
+        <owl:versionIRI rdf:resource="http://purl.com/irti/2017/08/03"/>
+        <dc:date xml:lang="en">2017-06-14</dc:date>
+        <dc:title xml:lang="en">Incident Response and Threat Intelligence ontology</dc:title>
+        <rdfs:comment xml:lang="en">Copyright 2017 Morton Swimmer
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</rdfs:comment>
+        <dc:description xml:lang="en">An ontology for classifying and analyzing Internet entities with an emphasis on computer incident response and threat intelligence processing.</dc:description>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.com/irti#dnsRecordObject -->
+
+    <owl:ObjectProperty rdf:about="http://purl.com/irti#dnsRecordObject">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasA -->
+
+    <owl:ObjectProperty rdf:about="http://purl.com/irti#hasA">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsRecordObject"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://purl.com/irti#IPv4Address"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasAAAA -->
+
+    <owl:ObjectProperty rdf:about="http://purl.com/irti#hasAAAA">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsRecordObject"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://purl.com/irti#IPv6Address"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasBadPTR -->
+
+    <owl:ObjectProperty rdf:about="http://purl.com/irti#hasBadPTR">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsRecordObject"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://purl.com/irti#InternetDomain"/>
+        <rdfs:comment xml:lang="en">This points to a PTR record that is not compliant with the RFCs but seems to be used to make MX servers compliant with the PTR requirements. What is probably happening is that it&apos;s being treated like CNAME or DNAME. In the end, it&apos;s not clear how this can even work, but it was common enough to merit it&apos;s own record.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasCNAME -->
+
+    <owl:ObjectProperty rdf:about="http://purl.com/irti#hasCNAME">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsRecordObject"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://purl.com/irti#InternetDomain"/>
+        <rdfs:label xml:lang="en">has CNAME record</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasDNSKEY -->
+
+    <owl:ObjectProperty rdf:about="http://purl.com/irti#hasDNSKEY">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsRecordObject"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://purl.com/irti#DNSKey"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasDS -->
+
+    <owl:ObjectProperty rdf:about="http://purl.com/irti#hasDS">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsRecordObject"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://purl.com/irti#DS"/>
+        <rdfs:label xml:lang="en">has DS record</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasDomain -->
+
+    <owl:ObjectProperty rdf:about="http://purl.com/irti#hasDomain">
+        <rdfs:range rdf:resource="http://purl.com/irti#InternetDomain"/>
+        <rdfs:comment xml:lang="en">specify that the subject refers to a domain</rdfs:comment>
+        <rdfs:label xml:lang="en">has domain</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasLOC -->
+
+    <owl:ObjectProperty rdf:about="http://purl.com/irti#hasLOC">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsRecordObject"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:comment xml:lang="en">Latitude, Longitude and altitude of the location of the server or service referenced by this domain.</rdfs:comment>
+        <rdfs:label xml:lang="en">has LOC record</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasMX -->
+
+    <owl:ObjectProperty rdf:about="http://purl.com/irti#hasMX">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsRecordObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasMxFQDN -->
+
+    <owl:ObjectProperty rdf:about="http://purl.com/irti#hasMxFQDN">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsRecordObject"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://purl.com/irti#InternetDomain"/>
+        <rdfs:label xml:lang="en">has MX FQDN</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasNS -->
+
+    <owl:ObjectProperty rdf:about="http://purl.com/irti#hasNS">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsRecordObject"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://purl.com/irti#FQDN"/>
+        <rdfs:label xml:lang="en">has nameserver</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasNSEC -->
+
+    <owl:ObjectProperty rdf:about="http://purl.com/irti#hasNSEC">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsRecordObject"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://purl.com/irti#NSEC"/>
+        <rdfs:label xml:lang="en">has NSEC record</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasNSEC3PARAM -->
+
+    <owl:ObjectProperty rdf:about="http://purl.com/irti#hasNSEC3PARAM">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsRecordObject"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://purl.com/irti#NSEC3Param"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasNSECAllowedRecord -->
+
+    <owl:ObjectProperty rdf:about="http://purl.com/irti#hasNSECAllowedRecord">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#hasNSEC"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://purl.com/irti#DNSRecord"/>
+        <rdfs:label xml:lang="en">has NSEC allowed record</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasNSECDomainFrom -->
+
+    <owl:ObjectProperty rdf:about="http://purl.com/irti#hasNSECDomainFrom">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#hasNSEC"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://purl.com/irti#InternetDomain"/>
+        <rdfs:label xml:lang="en">has NSEC domain range from</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasNSECDomainTo -->
+
+    <owl:ObjectProperty rdf:about="http://purl.com/irti#hasNSECDomainTo">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#hasNSEC"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://purl.com/irti#InternetDomain"/>
+        <rdfs:label xml:lang="en">has NSEC domain range to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasPTR -->
+
+    <owl:ObjectProperty rdf:about="http://purl.com/irti#hasPTR">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsRecordObject"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://purl.com/irti#FQDN"/>
+        <rdfs:label xml:lang="en">has PTR record</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasRRSIG -->
+
+    <owl:ObjectProperty rdf:about="http://purl.com/irti#hasRRSIG">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsRecordObject"/>
+        <rdfs:range rdf:resource="http://purl.com/irti#RRSIG"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasRating -->
+
+    <owl:ObjectProperty rdf:about="http://purl.com/irti#hasRating">
+        <rdfs:range rdf:resource="http://purl.com/irti#Rating"/>
+        <rdfs:label xml:lang="en">has rating</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasResolution -->
+
+    <owl:ObjectProperty rdf:about="http://purl.com/irti#hasResolution">
+        <rdfs:domain rdf:resource="http://purl.com/irti#FQDN"/>
+        <rdfs:range rdf:resource="http://purl.com/irti#Resolution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasSOA -->
+
+    <owl:ObjectProperty rdf:about="http://purl.com/irti#hasSOA">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsRecordObject"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://purl.com/irti#SOA"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasSOAMname -->
+
+    <owl:ObjectProperty rdf:about="http://purl.com/irti#hasSOAMname">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#hasSOA"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://purl.com/irti#InternetDomain"/>
+        <rdfs:label xml:lang="en">has SOA MNAME</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasSOARname -->
+
+    <owl:ObjectProperty rdf:about="http://purl.com/irti#hasSOARname">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#hasSOA"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://purl.com/irti#InternetDomain"/>
+        <rdfs:label xml:lang="en">has SOA RNAME</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasSPF -->
+
+    <owl:ObjectProperty rdf:about="http://purl.com/irti#hasSPF">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsRecordObject"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://purl.com/irti#SPF"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasSRV -->
+
+    <owl:ObjectProperty rdf:about="http://purl.com/irti#hasSRV">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsRecordObject"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://purl.com/irti#SRV"/>
+        <rdfs:label xml:lang="en">has SRV record</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasSRVTarget -->
+
+    <owl:ObjectProperty rdf:about="http://purl.com/irti#hasSRVTarget">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#hasSRV"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://purl.com/irti#InternetDomain"/>
+        <rdfs:comment xml:lang="en">the canonical hostname of the machine providing the service, ending in a dot.</rdfs:comment>
+        <rdfs:label xml:lang="en">has SRV target</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasSSHBanner -->
+
+    <owl:ObjectProperty rdf:about="http://purl.com/irti#hasSSHBanner">
+        <rdfs:domain rdf:resource="http://purl.com/irti#Address"/>
+        <rdfs:range rdf:resource="http://purl.com/irti#SSHBanner"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasSSHBannerText -->
+
+    <owl:ObjectProperty rdf:about="http://purl.com/irti#hasSSHBannerText">
+        <rdfs:domain rdf:resource="http://purl.com/irti#SSHBanner"/>
+        <rdfs:range rdf:resource="http://purl.com/irti#SSHBannerText"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasSSHFP -->
+
+    <owl:ObjectProperty rdf:about="http://purl.com/irti#hasSSHFP">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsRecordObject"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://purl.com/irti#SSHFP"/>
+        <rdfs:label xml:lang="en">has SSH fingerprint</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasSSHFPAlgorithm -->
+
+    <owl:ObjectProperty rdf:about="http://purl.com/irti#hasSSHFPAlgorithm">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsRecordObject"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://purl.com/irti#CryptoAlgorithm"/>
+        <rdfs:label xml:lang="en">has SSH fingerprint algorithm</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasSSHFPType -->
+
+    <owl:ObjectProperty rdf:about="http://purl.com/irti#hasSSHFPType">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsRecordObject"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://purl.com/irti#HashAlgorithm"/>
+        <rdfs:label xml:lang="en">has SSH fingerprint type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasViolation -->
+
+    <owl:ObjectProperty rdf:about="http://purl.com/irti#hasViolation">
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://purl.com/irti#DNSError"/>
+        <rdfs:label xml:lang="en">has violation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.com/irti#property -->
+
+    <owl:ObjectProperty rdf:about="http://purl.com/irti#property">
+        <rdfs:domain rdf:resource="http://purl.com/irti#InternetDomain"/>
+        <rdfs:range rdf:resource="http://purl.com/irti#DomainProperty"/>
+        <rdfs:comment xml:lang="en">A property of a domain</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.com/irti#dnsResolutionData -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.com/irti#dnsResolutionData">
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasCIDRPrefix -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.com/irti#hasCIDRPrefix">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#CIDR"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasCIDRSuffix -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.com/irti#hasCIDRSuffix">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#CIDR"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedShort"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasDNSKEYAlgorithm -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.com/irti#hasDNSKEYAlgorithm">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsResolutionData"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasDNSKEYFlags -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.com/irti#hasDNSKEYFlags">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsResolutionData"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasDNSKEYProtocol -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.com/irti#hasDNSKEYProtocol">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsResolutionData"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasDNSKEYPublicKey -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.com/irti#hasDNSKEYPublicKey">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsResolutionData"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#base64Binary"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasDSAlgorithm -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.com/irti#hasDSAlgorithm">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsResolutionData"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasDSFlags -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.com/irti#hasDSFlags">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsResolutionData"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasDSProtocol -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.com/irti#hasDSProtocol">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsResolutionData"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasDSPublicKey -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.com/irti#hasDSPublicKey">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsResolutionData"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#base64Binary"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasHINFO -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.com/irti#hasHINFO">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsResolutionData"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasMxPriority -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.com/irti#hasMxPriority">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsResolutionData"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasNSEC3PARAMFlagFields -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.com/irti#hasNSEC3PARAMFlagFields">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsResolutionData"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasNSEC3PARAMHashAlgorithms -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.com/irti#hasNSEC3PARAMHashAlgorithms">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsResolutionData"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasNSEC3PARAMIterations -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.com/irti#hasNSEC3PARAMIterations">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsResolutionData"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasNSEC3PARAMSalt -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.com/irti#hasNSEC3PARAMSalt">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsResolutionData"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#hexBinary"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasNumericAddress -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.com/irti#hasNumericAddress">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasRP -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.com/irti#hasRP">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsResolutionData"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasRRSIGAlgorithmNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.com/irti#hasRRSIGAlgorithmNumber">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsResolutionData"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label xml:lang="en">has RRSIG algorithm number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasRRSIGInceptionExpiration -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.com/irti#hasRRSIGInceptionExpiration">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsResolutionData"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">has RRSIG inception expiration</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasRRSIGKeyTag -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.com/irti#hasRRSIGKeyTag">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsResolutionData"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label xml:lang="en">has RRSIG key tag</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasRRSIGLabels -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.com/irti#hasRRSIGLabels">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsResolutionData"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label xml:lang="en">has RRSIG labels</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasRRSIGOriginalTTL -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.com/irti#hasRRSIGOriginalTTL">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsResolutionData"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label xml:lang="en">has RRSIG original TTL</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasRRSIGSignature -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.com/irti#hasRRSIGSignature">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsResolutionData"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#base64Binary"/>
+        <rdfs:label xml:lang="en">has RRSIG signature</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasRRSIGSignatureExpiration -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.com/irti#hasRRSIGSignatureExpiration">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsResolutionData"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">has RRSIG signature expiration</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasRRSIGSignerName -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.com/irti#hasRRSIGSignerName">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsResolutionData"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">has RRSIG signer name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasRRSIGTypeCovered -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.com/irti#hasRRSIGTypeCovered">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsResolutionData"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasSOAExpire -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.com/irti#hasSOAExpire">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsResolutionData"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasSOAMinTTL -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.com/irti#hasSOAMinTTL">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsResolutionData"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasSOARefresh -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.com/irti#hasSOARefresh">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsResolutionData"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasSOARetry -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.com/irti#hasSOARetry">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsResolutionData"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasSOASerial -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.com/irti#hasSOASerial">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsResolutionData"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasSRVPort -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.com/irti#hasSRVPort">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsResolutionData"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasSRVPriority -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.com/irti#hasSRVPriority">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsResolutionData"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasSRVWeight -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.com/irti#hasSRVWeight">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsResolutionData"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasSSHFPValue -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.com/irti#hasSSHFPValue">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsResolutionData"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#hexBinary"/>
+        <rdfs:label xml:lang="en">has SSH fingerprint value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.com/irti#hasSSHServerKey -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.com/irti#hasSSHServerKey"/>
+    
+
+
+    <!-- http://purl.com/irti#hasTXT -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.com/irti#hasTXT">
+        <rdfs:subPropertyOf rdf:resource="http://purl.com/irti#dnsResolutionData"/>
+        <rdfs:domain rdf:resource="http://purl.com/irti#Resolution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.com/irti#A -->
+
+    <owl:Class rdf:about="http://purl.com/irti#A">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#DNSRecord"/>
+        <rdfs:comment xml:lang="en">Returns a 32-bit IPv4 address, most commonly used to map hostnames to an IP address of the host, but it is also used for DNSBLs, storing subnet masks in RFC 1101, etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#AAAA -->
+
+    <owl:Class rdf:about="http://purl.com/irti#AAAA">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#DNSRecord"/>
+        <rdfs:comment xml:lang="en">Returns a 128-bit IPv6 address, most commonly used to map hostnames to an IP address of the host.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#Address -->
+
+    <owl:Class rdf:about="http://purl.com/irti#Address">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#InternetResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#AddressAllocation -->
+
+    <owl:Class rdf:about="http://purl.com/irti#AddressAllocation">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#InternetResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#BannerRetrieval -->
+
+    <owl:Class rdf:about="http://purl.com/irti#BannerRetrieval">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#InternetEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#Benign -->
+
+    <owl:Class rdf:about="http://purl.com/irti#Benign">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#Rating"/>
+        <rdfs:label xml:lang="en">benign</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#CIDR -->
+
+    <owl:Class rdf:about="http://purl.com/irti#CIDR">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#AddressAllocation"/>
+        <dc:title xml:lang="en">Classless Inter-Domain Routing</dc:title>
+        <rdfs:label>CIDR</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#CNAME -->
+
+    <owl:Class rdf:about="http://purl.com/irti#CNAME">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#DNSRecord"/>
+        <rdfs:comment xml:lang="en">A Canonical Name record (abbreviated as CNAME record) is a type of resource record in the Domain Name System (DNS) used to specify that a domain name is an alias for another domain, the &quot;canonical&quot; domain. All information, including subdomains, IP addresses, etc., are defined by the canonical domain.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://tools.ietf.org/html/rfc1035#page-12</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#Cipher -->
+
+    <owl:Class rdf:about="http://purl.com/irti#Cipher">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#CryptoAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#ClassfulNetworkAddress -->
+
+    <owl:Class rdf:about="http://purl.com/irti#ClassfulNetworkAddress">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#AddressAllocation"/>
+        <rdfs:comment xml:lang="en">A classful network is a network addressing architecture used in the Internet from 1981 until the introduction of Classless Inter-Domain Routing in 1993. The method divides the address space for Internet Protocol Version 4 (IPv4) into five address classes by address range. Classes A, B, C are networks of three different network sizes, i.e. number of hosts for unicast addresses. Class D is for multicast. The class E address range is reserved for future or experimental purposes. Under classful networking, the subnet mask was implied by which address range (class) the address occupied and did not need to be specified separately.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Classful_network</rdfs:seeAlso>
+        <owl:deprecated xml:lang="en">true</owl:deprecated>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#CryptoAlgorithm -->
+
+    <owl:Class rdf:about="http://purl.com/irti#CryptoAlgorithm"/>
+    
+
+
+    <!-- http://purl.com/irti#CryptographicHashAlgorithm -->
+
+    <owl:Class rdf:about="http://purl.com/irti#CryptographicHashAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#HashAlgorithm"/>
+        <rdfs:comment xml:lang="en">A cryptographic hash function is a hash function which is considered practically impossible to invert, that is, to recreate the input data from its hash value alone.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Cryptographic_hash_function</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#DNSError -->
+
+    <owl:Class rdf:about="http://purl.com/irti#DNSError"/>
+    
+
+
+    <!-- http://purl.com/irti#DNSKey -->
+
+    <owl:Class rdf:about="http://purl.com/irti#DNSKey">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#DNSRecord"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#DNSRecord -->
+
+    <owl:Class rdf:about="http://purl.com/irti#DNSRecord">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#InternetResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#DS -->
+
+    <owl:Class rdf:about="http://purl.com/irti#DS">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#DNSRecord"/>
+        <rdfs:comment xml:lang="en">The record used to identify the DNSSEC signing key of a delegated zone</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://tools.ietf.org/html/rfc4034</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#DSA -->
+
+    <owl:Class rdf:about="http://purl.com/irti#DSA">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#Cipher"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Digital_Signature_Algorithm</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#DomainProperty -->
+
+    <owl:Class rdf:about="http://purl.com/irti#DomainProperty"/>
+    
+
+
+    <!-- http://purl.com/irti#DoubleFlux -->
+
+    <owl:Class rdf:about="http://purl.com/irti#DoubleFlux">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#FastFlux"/>
+        <rdfs:comment xml:lang="en">A more sophisticated type of fast flux, referred to itself as &quot;double-flux&quot;, is characterized by multiple nodes within the network registering and de-registering their addresses as part of the DNS Name Server record list for the DNS zone. This provides an additional layer of redundancy and survivability within the malware network.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#ECDSA -->
+
+    <owl:Class rdf:about="http://purl.com/irti#ECDSA">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#Cipher"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#FQDN -->
+
+    <owl:Class rdf:about="http://purl.com/irti#FQDN">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#InternetDomain"/>
+        <rdfs:comment xml:lang="en">Fully qualified domain name</rdfs:comment>
+        <rdfs:label xml:lang="en">FQDN</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#FastFlux -->
+
+    <owl:Class rdf:about="http://purl.com/irti#FastFlux">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#DomainProperty"/>
+        <rdfs:comment xml:lang="en">Fast flux is a DNS technique used by botnets to hide phishing and malware delivery sites behind an ever-changing network of compromised hosts acting as proxies. It can also refer to the combination of peer-to-peer networking, distributed command and control, web-based load balancing and proxy redirection used to make malware networks more resistant to discovery and counter-measures.</rdfs:comment>
+        <rdfs:label xml:lang="en">FastFlux</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Fast_flux</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#HINFO -->
+
+    <owl:Class rdf:about="http://purl.com/irti#HINFO">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#DNSRecord"/>
+        <rdfs:comment xml:lang="en">Allows definition of the Hardware type and Operating System (OS) in use at a host. For security reasons these records are rarely used on public servers. If a space exists in the field it must be enclosed in quotes. Single space between Hardware and OS parameters.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zytrax.com/books/dns/ch8/hinfo.html</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#HashAlgorithm -->
+
+    <owl:Class rdf:about="http://purl.com/irti#HashAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#CryptoAlgorithm"/>
+        <rdfs:comment xml:lang="en">A hash function is any function that can be used to map data of arbitrary size to data of fixed size.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Hash_function</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#ILLEGAL_MX_RECORD -->
+
+    <owl:Class rdf:about="http://purl.com/irti#ILLEGAL_MX_RECORD">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#DNSError"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#ILLEGAL_SOA_RECORD -->
+
+    <owl:Class rdf:about="http://purl.com/irti#ILLEGAL_SOA_RECORD">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#DNSError"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#ILLEGAL_SRV_RECORD -->
+
+    <owl:Class rdf:about="http://purl.com/irti#ILLEGAL_SRV_RECORD">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#DNSError"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#IPAddress -->
+
+    <owl:Class rdf:about="http://purl.com/irti#IPAddress">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#Address"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#IPv4Address -->
+
+    <owl:Class rdf:about="http://purl.com/irti#IPv4Address">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#IPAddress"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#IPv4Prefix -->
+
+    <owl:Class rdf:about="http://purl.com/irti#IPv4Prefix">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#AddressAllocation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#IPv6Address -->
+
+    <owl:Class rdf:about="http://purl.com/irti#IPv6Address">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#IPAddress"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#IPv6Prefix -->
+
+    <owl:Class rdf:about="http://purl.com/irti#IPv6Prefix">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#AddressAllocation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#Incident -->
+
+    <owl:Class rdf:about="http://purl.com/irti#Incident">
+        <rdfs:comment xml:lang="en">A Threat incident is any activity or event that was measured that has been deemed a threat to computer systems or users.</rdfs:comment>
+        <rdfs:label xml:lang="en">Threat incident</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#InternetDomain -->
+
+    <owl:Class rdf:about="http://purl.com/irti#InternetDomain">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#InternetResource"/>
+        <rdfs:comment xml:lang="en">Arbitrary domain name</rdfs:comment>
+        <rdfs:label xml:lang="en">Domain</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#InternetEvent -->
+
+    <owl:Class rdf:about="http://purl.com/irti#InternetEvent">
+        <rdfs:comment xml:lang="en">Some property that existed at a point in time.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#InternetResource -->
+
+    <owl:Class rdf:about="http://purl.com/irti#InternetResource"/>
+    
+
+
+    <!-- http://purl.com/irti#LOC -->
+
+    <owl:Class rdf:about="http://purl.com/irti#LOC">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#DNSRecord"/>
+        <rdfs:comment xml:lang="en">A LOC record (experimental) is a means for expressing geographic location information for a domain name.
+
+It contains WGS84 Latitude, Longitude and Altitude information together with host/subnet physical size and location accuracy.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://tools.ietf.org/html/rfc1876</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#MACAddress -->
+
+    <owl:Class rdf:about="http://purl.com/irti#MACAddress">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#Address"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#MX -->
+
+    <owl:Class rdf:about="http://purl.com/irti#MX">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#DNSRecord"/>
+        <rdfs:comment xml:lang="en">Maps a domain name to a list of message transfer agents for that domain</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://tools.ietf.org/html/rfc1035#page-12</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://tools.ietf.org/html/rfc7505</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#MailDomain -->
+
+    <owl:Class rdf:about="http://purl.com/irti#MailDomain">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#FQDN"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#Malicious -->
+
+    <owl:Class rdf:about="http://purl.com/irti#Malicious">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#Rating"/>
+        <rdfs:label xml:lang="en">malicious</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#NS -->
+
+    <owl:Class rdf:about="http://purl.com/irti#NS">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#DNSRecord"/>
+        <rdfs:comment>Delegates a DNS zone to use the given authoritative name servers</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://tools.ietf.org/html/rfc1035#page-12</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#NSEC -->
+
+    <owl:Class rdf:about="http://purl.com/irti#NSEC">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#DNSRecord"/>
+        <rdfs:comment>Part of DNSSEC—used to prove a name does not exist. Uses the same format as the (obsolete) NXT record.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://tools.ietf.org/html/rfc4034</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#NSEC3 -->
+
+    <owl:Class rdf:about="http://purl.com/irti#NSEC3">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#DNSRecord"/>
+        <rdfs:comment>An extension to DNSSEC that allows proof of nonexistence for a name without permitting zonewalking</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://tools.ietf.org/html/rfc5155</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#NSEC3Param -->
+
+    <owl:Class rdf:about="http://purl.com/irti#NSEC3Param">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#DNSRecord"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#NameServer -->
+
+    <owl:Class rdf:about="http://purl.com/irti#NameServer">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#FQDN"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#PTR -->
+
+    <owl:Class rdf:about="http://purl.com/irti#PTR">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#DNSRecord"/>
+        <rdfs:comment xml:lang="en">Pointer to a canonical name. Unlike a CNAME, DNS processing stops and just the name is returned. The most common use is for implementing reverse DNS lookups, but other uses include such things as DNS-SD.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://tools.ietf.org/html/rfc1035#page-12</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#PrivateAddress -->
+
+    <owl:Class rdf:about="http://purl.com/irti#PrivateAddress">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#Address"/>
+        <rdfs:comment xml:lang="en">Non-routable address</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#PrivateIPAddress -->
+
+    <owl:Class rdf:about="http://purl.com/irti#PrivateIPAddress">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#IPAddress"/>
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#PrivateAddress"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#PrivateIPv4Address -->
+
+    <owl:Class rdf:about="http://purl.com/irti#PrivateIPv4Address">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#IPv4Address"/>
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#PrivateIPAddress"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#PrivateIPv6Address -->
+
+    <owl:Class rdf:about="http://purl.com/irti#PrivateIPv6Address">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#IPv6Address"/>
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#PrivateIPAddress"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#PublicAddress -->
+
+    <owl:Class rdf:about="http://purl.com/irti#PublicAddress">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#Address"/>
+        <rdfs:comment xml:lang="en">Routable address</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#PublicIPAddress -->
+
+    <owl:Class rdf:about="http://purl.com/irti#PublicIPAddress">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#IPAddress"/>
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#PublicAddress"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#PublicIPv4Address -->
+
+    <owl:Class rdf:about="http://purl.com/irti#PublicIPv4Address">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#IPv4Address"/>
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#PublicIPAddress"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#PublicIPv6Address -->
+
+    <owl:Class rdf:about="http://purl.com/irti#PublicIPv6Address">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#IPv6Address"/>
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#PublicIPAddress"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#RFC3330_Violation -->
+
+    <owl:Class rdf:about="http://purl.com/irti#RFC3330_Violation">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#DNSError"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#RP -->
+
+    <owl:Class rdf:about="http://purl.com/irti#RP">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#DNSRecord"/>
+        <rdfs:comment xml:lang="en">Information about the responsible person(s) for the domain. Usually an email address with the @ replaced by a .</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#RRSIG -->
+
+    <owl:Class rdf:about="http://purl.com/irti#RRSIG">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#DNSRecord"/>
+        <rdfs:comment xml:lang="en">Signature for a DNSSEC-secured record set. Uses the same format as the SIG record.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://tools.ietf.org/html/rfc4034</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#RSA -->
+
+    <owl:Class rdf:about="http://purl.com/irti#RSA">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#Cipher"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/RSA_(cryptosystem)</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#Rating -->
+
+    <owl:Class rdf:about="http://purl.com/irti#Rating">
+        <rdfs:label xml:lang="en">rating</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#Resolution -->
+
+    <owl:Class rdf:about="http://purl.com/irti#Resolution">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#InternetEvent"/>
+        <rdfs:comment xml:lang="en">A DNS resolution is a mapping from a domain name to any of the DNS records that IANA defines in RFC 1035.
+https://www.ietf.org/rfc/rfc1035.txt</rdfs:comment>
+        <rdfs:label xml:lang="en">DNS Resolution</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.ietf.org/rfc/rfc1035.txt</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#SHA_1 -->
+
+    <owl:Class rdf:about="http://purl.com/irti#SHA_1">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#CryptographicHashAlgorithm"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/SHA-1</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#SHA_256 -->
+
+    <owl:Class rdf:about="http://purl.com/irti#SHA_256">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#CryptographicHashAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#SOA -->
+
+    <owl:Class rdf:about="http://purl.com/irti#SOA">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#DNSRecord"/>
+        <rdfs:comment xml:lang="en">Start of [a zone of] authority record</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://tools.ietf.org/html/rfc1035#page-12</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://tools.ietf.org/html/rfc2308</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#SPF -->
+
+    <owl:Class rdf:about="http://purl.com/irti#SPF">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#DNSRecord"/>
+        <rdfs:comment xml:lang="en">Sender Policy Framework (SPF) is a simple email-validation system designed to detect email spoofing by providing a mechanism to allow receiving mail exchangers to check that incoming mail from a domain comes from a host authorized by that domain&apos;s administrators. The list of authorized sending hosts for a domain is published in the Domain Name System (DNS) records for that domain in the form of a specially formatted TXT record. Email spam and phishing often use forged sender-addresses, so publishing and checking SPF records can be considered anti-spam techniques.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Sender_Policy_Framework</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#SRV -->
+
+    <owl:Class rdf:about="http://purl.com/irti#SRV">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#DNSRecord"/>
+        <rdfs:comment xml:lang="en">A Service record (SRV record) is a specification of data in the Domain Name System defining the location, i.e. the hostname and port number, of servers for specified services.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://tools.ietf.org/html/rfc2782</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#SSHBanner -->
+
+    <owl:Class rdf:about="http://purl.com/irti#SSHBanner">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#BannerRetrieval"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#SSHBannerText -->
+
+    <owl:Class rdf:about="http://purl.com/irti#SSHBannerText">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#BannerRetrieval"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#SSHFP -->
+
+    <owl:Class rdf:about="http://purl.com/irti#SSHFP">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#DNSRecord"/>
+        <rdfs:comment xml:lang="en">Upon connection to an SSH server, the SSH client MAY look up the
+   SSHFP resource record(s) for the host it is connecting to.  If the
+   algorithm and fingerprint of the key received from the SSH server
+   match the algorithm and fingerprint of one of the SSHFP resource
+   record(s) returned from DNS, the client MAY accept the identity of
+   the server.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.openssh.com/txt/rfc4255.txt</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#SharingPolicy -->
+
+    <owl:Class rdf:about="http://purl.com/irti#SharingPolicy"/>
+    
+
+
+    <!-- http://purl.com/irti#SingleFlux -->
+
+    <owl:Class rdf:about="http://purl.com/irti#SingleFlux">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#FastFlux"/>
+        <rdfs:comment xml:lang="en">The simplest type of fast flux, named &quot;single-flux&quot;, is characterized by multiple individual nodes within the network registering and de-registering their addresses as part of the DNS A (address) record list for a single DNS name. This combines round robin DNS with very short—usually less than five minutes (300s)[2] -- TTL (time to live) values to create a constantly changing list of destination addresses for that single DNS name. The list can be hundreds or thousands of entries long.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#Suspicious -->
+
+    <owl:Class rdf:about="http://purl.com/irti#Suspicious">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#Rating"/>
+        <rdfs:label xml:lang="en">suspicious</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#TLD -->
+
+    <owl:Class rdf:about="http://purl.com/irti#TLD">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#InternetDomain"/>
+        <dc:description xml:lang="en">Top-level domain</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#TLPAmber -->
+
+    <owl:Class rdf:about="http://purl.com/irti#TLPAmber">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#SharingPolicy"/>
+        <dc:description xml:lang="en">Limited distribution</dc:description>
+        <rdfs:comment xml:lang="en">Recipients may only share TLP:AMBER information with members of their own organization, and with clients or customers who need to know the information to protect themselves or prevent further harm. Sources are at liberty to specify additional intended limits of the sharing: these must be adhered to.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#TLPGreen -->
+
+    <owl:Class rdf:about="http://purl.com/irti#TLPGreen">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#SharingPolicy"/>
+        <dc:description xml:lang="en">Community wide</dc:description>
+        <rdfs:comment xml:lang="en">Recipients may share TLP:GREEN information with peers and partner organizations within their sector or community, but not via publicly accessible channels. Information in this category can be circulated widely within a particular community. TLP:GREEN information may not be released outside of the community.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#TLPRed -->
+
+    <owl:Class rdf:about="http://purl.com/irti#TLPRed">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#SharingPolicy"/>
+        <dc:description xml:lang="en">Personal for named recipients only</dc:description>
+        <rdfs:comment xml:lang="en">Recipients may not share TLP:RED information with any parties outside of the specific exchange, meeting, or conversation in which it was originally disclosed. In the context of a meeting, for example, TLP:RED information is limited to those present at the meeting. In most circumstances, TLP:RED should be exchanged verbally or in person.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#TLPWhite -->
+
+    <owl:Class rdf:about="http://purl.com/irti#TLPWhite">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#SharingPolicy"/>
+        <dc:description xml:lang="en">Unlimited</dc:description>
+        <rdfs:comment xml:lang="en">Subject to standard copyright rules, TLP:WHITE information may be distributed without restriction.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#TXT -->
+
+    <owl:Class rdf:about="http://purl.com/irti#TXT">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#DNSRecord"/>
+        <rdfs:comment xml:lang="en">A TXT record (short for text record) is a type of resource record in the Domain Name System (DNS) used to provide the ability to associate some arbitrary and unformatted text with a host or other name, such as human readable information about a server, network, data center, and other accounting information. A domain is not limited to having only one text record, any fully qualified domain may potentially have several records.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/TXT_Record</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.com/irti#VLSM -->
+
+    <owl:Class rdf:about="http://purl.com/irti#VLSM">
+        <rdfs:subClassOf rdf:resource="http://purl.com/irti#AddressAllocation"/>
+        <dc:title xml:lang="en">Variable-Length Subnet Masking</dc:title>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.com/irti#IPv4Address"/>
+            <rdf:Description rdf:about="http://purl.com/irti#IPv4Prefix"/>
+            <rdf:Description rdf:about="http://purl.com/irti#IPv6Address"/>
+            <rdf:Description rdf:about="http://purl.com/irti#IPv6Prefix"/>
+            <rdf:Description rdf:about="http://purl.com/irti#MACAddress"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+
