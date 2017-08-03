@@ -6,7 +6,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://purl.com/irti#"
-     versionIRI="http://purl.com/irti/2017/06/14">
+     versionIRI="http://purl.com/irti/2017/08/03">
     <Prefix name="" IRI="http://purl.com/irti#"/>
     <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
@@ -75,10 +75,10 @@ THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRES
         <Class IRI="DomainProperty"/>
     </Declaration>
     <Declaration>
-        <Class IRI="CryptoAlgorithm"/>
+        <Class IRI="TLPAmber"/>
     </Declaration>
     <Declaration>
-        <Class IRI="TLPAmber"/>
+        <Class IRI="CryptoAlgorithm"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="property"/>
@@ -87,16 +87,22 @@ THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRES
         <DataProperty IRI="hasSOAExpire"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasBadPTR"/>
+        <Class IRI="ClassfulNetworkAddress"/>
     </Declaration>
     <Declaration>
         <Class IRI="IPv6Address"/>
     </Declaration>
     <Declaration>
-        <Class IRI="DNSKey"/>
+        <ObjectProperty IRI="hasBadPTR"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="hasDNSKEYFlags"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="DNSKey"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="PrivateAddress"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="hasA"/>
@@ -115,6 +121,9 @@ THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRES
     </Declaration>
     <Declaration>
         <Class IRI="Rating"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasCIDRSuffix"/>
     </Declaration>
     <Declaration>
         <Class IRI="ILLEGAL_SRV_RECORD"/>
@@ -144,10 +153,13 @@ THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRES
         <Class IRI="SHA_256"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="hasRRSIGInceptionExpiration"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="HINFO"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="hasRRSIGInceptionExpiration"/>
+        <Class IRI="Benign"/>
     </Declaration>
     <Declaration>
         <Class IRI="ECDSA"/>
@@ -156,22 +168,19 @@ THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRES
         <Class IRI="A"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Benign"/>
+        <DataProperty IRI="hasNSEC3PARAMHashAlgorithms"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="hasDomain"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="hasNSEC3PARAMHashAlgorithms"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="NS"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasSSHFPType"/>
+        <Class IRI="PTR"/>
     </Declaration>
     <Declaration>
-        <Class IRI="PTR"/>
+        <ObjectProperty IRI="hasSSHFPType"/>
     </Declaration>
     <Declaration>
         <Class IRI="RFC3330_Violation"/>
@@ -195,7 +204,7 @@ THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRES
         <Class IRI="Cipher"/>
     </Declaration>
     <Declaration>
-        <Class IRI="BannerRetrieval"/>
+        <Class IRI="PrivateIPv4Address"/>
     </Declaration>
     <Declaration>
         <Class IRI="RSA"/>
@@ -204,16 +213,25 @@ THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRES
         <Class IRI="NameServer"/>
     </Declaration>
     <Declaration>
+        <Class IRI="BannerRetrieval"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="CIDR"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="PublicIPAddress"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="DNSError"/>
     </Declaration>
     <Declaration>
         <Class IRI="Address"/>
     </Declaration>
     <Declaration>
-        <Class IRI="LOC"/>
+        <Class IRI="SSHFP"/>
     </Declaration>
     <Declaration>
-        <Class IRI="SSHFP"/>
+        <Class IRI="LOC"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="hasDSFlags"/>
@@ -225,7 +243,13 @@ THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRES
         <ObjectProperty IRI="hasViolation"/>
     </Declaration>
     <Declaration>
+        <Class IRI="PublicIPv4Address"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="hasSSHBannerText"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="VLSM"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="hasMxPriority"/>
@@ -288,25 +312,25 @@ THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRES
         <Class IRI="CNAME"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="hasNumericAddress"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="hasRating"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasSOA"/>
+        <DataProperty IRI="hasNumericAddress"/>
     </Declaration>
     <Declaration>
         <Class IRI="SPF"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="hasSOA"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="IPv4Address"/>
     </Declaration>
     <Declaration>
-        <Class IRI="DNSRecord"/>
+        <Class IRI="ILLEGAL_MX_RECORD"/>
     </Declaration>
     <Declaration>
-        <Class IRI="ILLEGAL_MX_RECORD"/>
+        <Class IRI="DNSRecord"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="hasNSEC"/>
@@ -333,16 +357,28 @@ THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRES
         <DataProperty IRI="hasRRSIGOriginalTTL"/>
     </Declaration>
     <Declaration>
-        <Class IRI="NSEC"/>
+        <Class IRI="PublicAddress"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="hasNSEC3PARAM"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="NSEC"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasCIDRPrefix"/>
     </Declaration>
     <Declaration>
         <Class IRI="TLPGreen"/>
     </Declaration>
     <Declaration>
         <Class IRI="MX"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="IPv6Prefix"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="IPv4Prefix"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="hasCNAME"/>
@@ -372,6 +408,9 @@ THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRES
         <Class IRI="ILLEGAL_SOA_RECORD"/>
     </Declaration>
     <Declaration>
+        <Class IRI="PrivateIPAddress"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="hasSRVTarget"/>
     </Declaration>
     <Declaration>
@@ -387,13 +426,19 @@ THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRES
         <DataProperty IRI="hasDSProtocol"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasNSECDomainFrom"/>
+        <Class IRI="NSEC3"/>
     </Declaration>
     <Declaration>
         <Class IRI="SharingPolicy"/>
     </Declaration>
     <Declaration>
-        <Class IRI="NSEC3"/>
+        <ObjectProperty IRI="hasNSECDomainFrom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="AddressAllocation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="IPAddress"/>
     </Declaration>
     <Declaration>
         <Class IRI="TLPRed"/>
@@ -409,6 +454,12 @@ THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRES
     </Declaration>
     <Declaration>
         <DataProperty IRI="hasRRSIGTypeCovered"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="PublicIPv6Address"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="PrivateIPv6Address"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="hasHINFO"/>
@@ -438,19 +489,19 @@ THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRES
         <Class IRI="AAAA"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasPTR"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="hasSOARetry"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="hasRRSIGAlgorithmNumber"/>
+        <ObjectProperty IRI="hasPTR"/>
     </Declaration>
     <Declaration>
         <Class IRI="Suspicious"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="hasSOARefresh"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasRRSIGAlgorithmNumber"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="A"/>
@@ -465,6 +516,10 @@ THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRES
         <Class IRI="InternetResource"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="AddressAllocation"/>
+        <Class IRI="InternetResource"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="BannerRetrieval"/>
         <Class IRI="InternetEvent"/>
     </SubClassOf>
@@ -473,12 +528,20 @@ THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRES
         <Class IRI="Rating"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="CIDR"/>
+        <Class IRI="AddressAllocation"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="CNAME"/>
         <Class IRI="DNSRecord"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Cipher"/>
         <Class IRI="CryptoAlgorithm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ClassfulNetworkAddress"/>
+        <Class IRI="AddressAllocation"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="CryptographicHashAlgorithm"/>
@@ -537,12 +600,24 @@ THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRES
         <Class IRI="DNSError"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="IPv4Address"/>
+        <Class IRI="IPAddress"/>
         <Class IRI="Address"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="IPv4Address"/>
+        <Class IRI="IPAddress"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="IPv4Prefix"/>
+        <Class IRI="AddressAllocation"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="IPv6Address"/>
-        <Class IRI="Address"/>
+        <Class IRI="IPAddress"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="IPv6Prefix"/>
+        <Class IRI="AddressAllocation"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="InternetDomain"/>
@@ -591,6 +666,62 @@ THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRES
     <SubClassOf>
         <Class IRI="PTR"/>
         <Class IRI="DNSRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PrivateAddress"/>
+        <Class IRI="Address"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PrivateIPAddress"/>
+        <Class IRI="IPAddress"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PrivateIPAddress"/>
+        <Class IRI="PrivateAddress"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PrivateIPv4Address"/>
+        <Class IRI="IPv4Address"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PrivateIPv4Address"/>
+        <Class IRI="PrivateIPAddress"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PrivateIPv6Address"/>
+        <Class IRI="IPv6Address"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PrivateIPv6Address"/>
+        <Class IRI="PrivateIPAddress"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PublicAddress"/>
+        <Class IRI="Address"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PublicIPAddress"/>
+        <Class IRI="IPAddress"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PublicIPAddress"/>
+        <Class IRI="PublicAddress"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PublicIPv4Address"/>
+        <Class IRI="IPv4Address"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PublicIPv4Address"/>
+        <Class IRI="PublicIPAddress"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PublicIPv6Address"/>
+        <Class IRI="IPv6Address"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PublicIPv6Address"/>
+        <Class IRI="PublicIPAddress"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="RFC3330_Violation"/>
@@ -676,6 +807,17 @@ THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRES
         <Class IRI="TXT"/>
         <Class IRI="DNSRecord"/>
     </SubClassOf>
+    <SubClassOf>
+        <Class IRI="VLSM"/>
+        <Class IRI="AddressAllocation"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="IPv4Address"/>
+        <Class IRI="IPv4Prefix"/>
+        <Class IRI="IPv6Address"/>
+        <Class IRI="IPv6Prefix"/>
+        <Class IRI="MACAddress"/>
+    </DisjointClasses>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="dnsRecordObject"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
@@ -1161,11 +1303,25 @@ THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRES
         <DataProperty IRI="dnsResolutionData"/>
     </SubDataPropertyOf>
     <FunctionalDataProperty>
+        <DataProperty IRI="hasCIDRPrefix"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="hasCIDRSuffix"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
         <DataProperty IRI="hasNumericAddress"/>
     </FunctionalDataProperty>
     <DataPropertyDomain>
         <DataProperty IRI="dnsResolutionData"/>
         <Class IRI="Resolution"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasCIDRPrefix"/>
+        <Class IRI="CIDR"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasCIDRSuffix"/>
+        <Class IRI="CIDR"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="hasDNSKEYAlgorithm"/>
@@ -1307,6 +1463,14 @@ THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRES
         <DataProperty IRI="hasTXT"/>
         <Class IRI="Resolution"/>
     </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="hasCIDRPrefix"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasCIDRSuffix"/>
+        <Datatype abbreviatedIRI="xsd:unsignedShort"/>
+    </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="hasDNSKEYAlgorithm"/>
         <Datatype abbreviatedIRI="xsd:integer"/>
@@ -1463,6 +1627,16 @@ THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRES
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">benign</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+        <IRI>CIDR</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Classless Inter-Domain Routing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>CIDR</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">CIDR</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>CNAME</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Canonical Name record (abbreviated as CNAME record) is a type of resource record in the Domain Name System (DNS) used to specify that a domain name is an alias for another domain, the &quot;canonical&quot; domain. All information, including subdomains, IP addresses, etc., are defined by the canonical domain.</Literal>
@@ -1471,6 +1645,21 @@ THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRES
         <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
         <IRI>CNAME</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://tools.ietf.org/html/rfc1035#page-12</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>ClassfulNetworkAddress</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A classful network is a network addressing architecture used in the Internet from 1981 until the introduction of Classless Inter-Domain Routing in 1993. The method divides the address space for Internet Protocol Version 4 (IPv4) into five address classes by address range. Classes A, B, C are networks of three different network sizes, i.e. number of hosts for unicast addresses. Class D is for multicast. The class E address range is reserved for future or experimental purposes. Under classful networking, the subnet mask was implied by which address range (class) the address occupied and did not need to be specified separately.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>ClassfulNetworkAddress</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Classful_network</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <IRI>ClassfulNetworkAddress</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1651,6 +1840,16 @@ It contains WGS84 Latitude, Longitude and Altitude information together with hos
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>PrivateAddress</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Non-routable address</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>PublicAddress</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Routable address</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>RP</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Information about the responsible person(s) for the domain. Usually an email address with the @ replaced by a .</Literal>
     </AnnotationAssertion>
@@ -1809,6 +2008,11 @@ https://www.ietf.org/rfc/rfc1035.txt</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
         <IRI>TXT</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/TXT_Record</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+        <IRI>VLSM</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Variable-Length Subnet Masking</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
